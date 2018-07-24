@@ -3783,7 +3783,19 @@ eval("var g;\n\n// This works in non-strict mode\ng = (function() {\n\treturn th
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-eval("\n\n//# sourceURL=webpack:///./src/js/index.js?");
+eval("\n\nvar _Chart = __webpack_require__(/*! ./models/Chart */ \"./src/js/models/Chart.js\");\n\nvar _Chart2 = _interopRequireDefault(_Chart);\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\n//# sourceURL=webpack:///./src/js/index.js?");
+
+/***/ }),
+
+/***/ "./src/js/models/Chart.js":
+/*!********************************!*\
+  !*** ./src/js/models/Chart.js ***!
+  \********************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+eval("\n\n//# sourceURL=webpack:///./src/js/models/Chart.js?");
 
 /***/ }),
 
