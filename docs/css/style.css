@@ -189,6 +189,40 @@ input[type="range"]::-ms-track {
 input[type="range"]::-webkit-slider-runnable-track {
   width: 100%; }
 
+input[type="range"] {
+  -webkit-appearance: none !important;
+  background: #000;
+  border: #666 1px solid;
+  height: 6px; }
+
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none !important;
+  background: #3389a6;
+  height: 15px;
+  width: 15px;
+  border-radius: 75%;
+  cursor: pointer; }
+
+input::-moz-range-track {
+  -webkit-appearance: none !important;
+  background: #000;
+  border: #666 1px solid;
+  height: 6px; }
+
+input::-moz-range-track::-webkit-slider-thumb {
+  -webkit-appearance: none !important;
+  background: #3389a6;
+  height: 15px;
+  width: 15px;
+  border-radius: 75%;
+  cursor: pointer; }
+
+input[type="range"]:focus {
+  outline: none; }
+
+input::-moz-range-track:focus {
+  outline: none; }
+
 .bar__area {
   height: 100%;
   width: 100%;
