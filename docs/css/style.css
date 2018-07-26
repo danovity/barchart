@@ -128,7 +128,8 @@ body {
       font-weight: 900;
       color: #5d5d5d; }
   .control-panel__ctrlBtn:hover {
-    color: grey; }
+    color: grey;
+    cursor: pointer; }
 
 .activate {
   color: white;
@@ -146,7 +147,8 @@ body {
   text-transform: uppercase; }
   .submitBtn:hover {
     background-color: #3b3b3b;
-    color: white; }
+    color: white;
+    cursor: pointer; }
 
 .input__bookName,
 .input__bookQuantity {
