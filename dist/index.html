@@ -5,16 +5,166 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ"
+        crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700,900" rel="stylesheet">
     <title>LHL - Bar Chart</title>
 </head>
 
 <body>
+    <div class="control-panel">
+        <h2 class="header-secondary">Control Panel</h2>
+        <div class="control-panel__controls">
+            <form class="control-panel__container control-panel__container--input">
+                <p class="control-panel__title control-panel__title--input">Add Book</p>
+                <div class="control-panel__content control-panel__content--input">
+                    <!-- <div class="input__bookName--label control-panel__title--normalText">Book Name</div> -->
+                    <input type="text" class="input__bookName control-panel__title--normalText" name="bookName" value="" placeholder="Enter Book Name">
+                    <!-- <div class="input__bookQuantity--label control-panel__title--normalText">
+                        Quantity
+                    </div> -->
+                    <input type="text" class="input__bookQuantity control-panel__title--normalText" name="quantity" value="" placeholder="Enter Book Quantity">
+                    <input type="submit" value="Submit" class="submitBtn submitBtn__newBook">
+                </div>
+            </form>
+            <div class="control-panel__smallctrls">
+                <div class="control-panel__container control-panel__container--barWidthCtrl">
+                    <p class="control-panel__title control-panel__title--barWidthCtrl">Bar Width</p>
+                    <div class="control-panel__content control-panel__content--barWidthCtrl">
+                        <div class="control-panel__container--btnContainer">
+                            <input type="range" class="control-panel__slider control-panel__slider--barWidthCtrl" min="10" max='100' value="100" step="1">
+                            <!--<i class="fas fa-minus-circle control-panel__ctrlBtn control-panel__ctrlBtn--barWidthMinus"></i>
+                                    <i class="fas fa-plus-circle control-panel__ctrlBtn control-panel__ctrlBtn--barWidthPlus"></i> -->
+                        </div>
+                    </div>
+                </div>
+                <div class="control-panel__container control-panel__container--barLabelFontCtrl">
+                    <p class="control-panel__title control-panel__title--barLabelFontCtrl">Bar Label Font Size</p>
+                    <div class="control-panel__content control-panel__content--barLabelFontCtrl">
+                        <div class="control-panel__container--btnContainer">
+                            <input type="range" class="control-panel__slider control-panel__slider--barLabelFontCtrl" min="8" max='58' value="16" step="1">
+                            <!--                         <i class="fas fa-minus-circle control-panel__ctrlBtn control-panel__ctrlBtn--barLabelFontMinus"></i>
+                                        <i class="fas fa-plus-circle control-panel__ctrlBtn control-panel__ctrlBtn--barLabelFontPlus"></i> -->
+                        </div>
+                    </div>
+                </div>
+                <div class="control-panel__container control-panel__container--barValuePositionCtrl">
+                    <p class="control-panel__title control-panel__title--barValuePositionCtrl">Bar Value Position</p>
+                    <div class="control-panel__content control-panel__content--barValuePositionCtrl">
+                        <div class="control-panel__dropDownList control-panel__dropDownList--displayList">
+                            <button class="control-panel__dropDownBtn control-panel__dropDownBtn--top" value="start">Top</button>
+                            <button class="control-panel__dropDownBtn--center activate " value="center">Center</button>
+                            <button class="control-panel__dropDownBtn control-panel__dropDownBtn--bottom ui-button ui-widget ui-corner-all" value="end">Bottom</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
-    <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
-    <script language="JavaScript" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script language="JavaScript" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+            <div class="control-panel__container control-panel__container--barColorCtrl">
+                <p class="control-panel__title control-panel__title--barColorCtrl">Bar Color</p>
+                <div class="control-panel__content control-panel__content--barColorCtrl">
+                    <div class="control-panel__container--btnContainer">
+                        <p class="control-panel__ctrlValue control-panel__ctrlValue--barColorCurrent "></p>
+                    </div>
+                    <div class="control-panel__container--btnContainer">
+                        <p class="control-panel__title--normalText control-panel__title--hashTag">#</p>
+                        <input class="control-panel__ctrlValue control-panel__ctrlValue--barColorNew" placeholder="New Color" value=""></input>
+                    </div>
+                    <input type="submit" value="Submit" class="submitBtn submitBtn--newBarColor">
+                </div>
+            </div>
 
-    <script type="text/javascript" src="js/bundle.js"></script>
-</body>
+            <div class="control-panel__container control-panel__container--labelColorCtrl">
+                <p class="control-panel__title control-panel__title--labelColorCtrl">Label Color</p>
+                <div class="control-panel__content control-panel__content--labelColorCtrl">
+                    <div class="control-panel__container--btnContainer">
+                        <p class="control-panel__ctrlValue control-panel__ctrlValue--labelColorCurrent"></p>
+                    </div>
+                    <div class="control-panel__container--btnContainer">
+                        <p class="control-panel__title--normalText control-panel__title--hashTag">#</p>
+                        <input class="control-panel__ctrlValue control-panel__ctrlValue--labelColorNew" placeholder="New Color" value=""></input>
+                    </div>
+                    <input type="submit" value="Submit" class="submitBtn submitBtn--newLabelColor">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="main-chart">
+        <h1 class="main-chart__title header-primary">
+            LHL Bar Chart
+        </h1>
+        <div class="chart">
+            <!--<div class="y-axis">
+                        
+                          <div class="y-axis-mark y-axis--4">10</div>
+                          <div class="y-axis-mark y-axis--3">7.5</div>
+                          <div class="y-axis-mark y-axis--2">5</div>
+                          <div class="y-axis-mark y-axis--1">2.5</div>
+                          <div class="y-axis-mark y-axis--0">0</div>
+                        
+                      </div>-->
+
+            <!--<div class="chart-area">
+                        <div class="book book1">
+                          <div class="bar bar1" 
+                               style="height:240px;">
+                            3
+                          </div>
+                          <div class="bookName">
+                            book name
+                            <div class="btnDelete">
+                              <i class="far fa-times-circle"></i>
+                            </div>
+                          </div>
+                          
+                        </div>
+                       <div class="book book2">
+                          <div class="bar bar2" 
+                               style="height:400px;">
+                            5
+                         </div>
+                         <div class="bookName">
+                           book name
+                           <div class="btnDelete">
+                              <i class="far fa-times-circle"></i>
+                            </div>
+                         </div>
+                        </div>
+                        <div class="book book3">
+                          <div class="bar bar3" 
+                               style="height:640px;">
+                            8
+                          </div>
+                          <div class="bookName">
+                            book name
+                            <div class="btnDelete">
+                              <i class="far fa-times-circle"></i>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="book book4">
+                          <div class="bar bar4" 
+                               style="height:800px;">
+                            10
+                          </div>
+                          <div class="bookName">
+                            book name
+                            <div class="btnDelete">
+                              <i class="far fa-times-circle"></i>
+                            </div>
+                          </div>
+                        </div>
+                      </div> 
+                    </div>-->
+        </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.11.1/jquery-ui.min.js"></script>
+    <script src="js/index.js"></script>
+
+<script type="text/javascript" src="js/bundle.js"></script></body>
 
 </html>
