@@ -102,7 +102,8 @@ body {
     border-radius: 5%;
     border: none; }
   .control-panel__dropDownBtn:hover {
-    background-color: lightgrey; }
+    background-color: lightgrey;
+    cursor: pointer; }
   .control-panel__smallctrls {
     display: flex;
     flex-direction: column; }
@@ -128,8 +129,7 @@ body {
       font-weight: 900;
       color: #5d5d5d; }
   .control-panel__ctrlBtn:hover {
-    color: grey;
-    cursor: pointer; }
+    color: grey; }
 
 .activate {
   color: white;
