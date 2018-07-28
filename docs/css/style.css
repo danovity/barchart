@@ -369,7 +369,8 @@ input::-moz-range-track:focus {
   background: linear-gradient(to right bottom, #0082c8, #eaf8ff 100%);
   box-shadow: 5px 5px 8px 5px #888888;
   margin-bottom: 1vw;
-  padding-bottom: 5vw; }
+  padding-bottom: 5vw;
+  padding-right: 1vw; }
 
 .book {
   position: relative;
