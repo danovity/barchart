@@ -127,7 +127,9 @@ body {
   .control-panel__container {
     display: flex;
     flex-direction: column;
-    box-shadow: 0.1rem 0.1rem 0.8rem #888888; }
+    box-shadow: 0.1rem 0.1rem 0.8rem #888888;
+    /*     &--input {
+    } */ }
     .control-panel__container--btnContainer {
       display: grid;
       grid-template-columns: min-content 1fr;
@@ -314,6 +316,11 @@ input::-moz-range-track:focus {
   justify-content: center;
   font-size: 1.6rem;
   position: relative; }
+  .bar:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+    z-index: 100;
+    border: 0.2rem solid #888888; }
 
 .y-axis {
   display: grid;
