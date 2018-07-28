@@ -52,6 +52,68 @@ input:checked + .slider:before {
 .slider.round:before {
   border-radius: 50%; }
 
+input[type="range"] {
+  -webkit-appearance: none;
+  /* Hides the slider so that custom slider can be made */
+  background: transparent;
+  /* Otherwise white in Chrome */ }
+
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none; }
+
+input[type="range"]:focus {
+  outline: none;
+  /* Removes the blue border. You should probably do some kind of focus styling for accessibility reasons though. */ }
+
+input[type="range"]::-moz-range-track {
+  width: 100%;
+  cursor: pointer; }
+
+input[type="range"]::-ms-track {
+  width: 100%;
+  cursor: pointer;
+  /* Hides the slider so custom styles can be added */
+  background: transparent;
+  border-color: transparent;
+  color: transparent; }
+
+input[type="range"]::-webkit-slider-runnable-track {
+  width: 100%; }
+
+input[type="range"] {
+  -webkit-appearance: none !important;
+  background: #000;
+  border: #666 1px solid;
+  height: 6px; }
+
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none !important;
+  background: #3389a6;
+  height: 15px;
+  width: 15px;
+  border-radius: 75%;
+  cursor: pointer; }
+
+input::-moz-range-track {
+  -webkit-appearance: none !important;
+  background: #000;
+  border: #666 1px solid;
+  height: 6px; }
+
+input::-moz-range-track::-webkit-slider-thumb {
+  -webkit-appearance: none !important;
+  background: #3389a6;
+  height: 15px;
+  width: 15px;
+  border-radius: 75%;
+  cursor: pointer; }
+
+input[type="range"]:focus {
+  outline: none; }
+
+input::-moz-range-track:focus {
+  outline: none; }
+
 /*
 $breakpoint argument choices:
 - phone
@@ -147,18 +209,6 @@ body {
   top: 50%;
   left: 80%; }
 
-.header-secondary {
-  text-align: center;
-  font-size: 3rem;
-  background-color: lightblue;
-  border-top-right-radius: 0.5rem;
-  border-top-left-radius: 0.5rem;
-  transition: all 0.2s; }
-  .header-secondary:hover {
-    cursor: pointer;
-    background-color: #3389a6;
-    color: white; }
-
 .control-panel {
   display: grid;
   grid-template-rows: min-content 1fr; }
@@ -171,9 +221,7 @@ body {
   .control-panel__container {
     display: flex;
     flex-direction: column;
-    box-shadow: 0.1rem 0.1rem 0.8rem #888888;
-    /*     &--input {
-    } */ }
+    box-shadow: 0.1rem 0.1rem 0.8rem #888888; }
     .control-panel__container--btnContainer {
       display: grid;
       grid-template-columns: min-content 1fr;
@@ -283,68 +331,6 @@ body {
   .input__bookQuantity:hover {
     background-color: #909090; }
 
-input[type="range"] {
-  -webkit-appearance: none;
-  /* Hides the slider so that custom slider can be made */
-  background: transparent;
-  /* Otherwise white in Chrome */ }
-
-input[type="range"]::-webkit-slider-thumb {
-  -webkit-appearance: none; }
-
-input[type="range"]:focus {
-  outline: none;
-  /* Removes the blue border. You should probably do some kind of focus styling for accessibility reasons though. */ }
-
-input[type="range"]::-moz-range-track {
-  width: 100%;
-  cursor: pointer; }
-
-input[type="range"]::-ms-track {
-  width: 100%;
-  cursor: pointer;
-  /* Hides the slider so custom styles can be added */
-  background: transparent;
-  border-color: transparent;
-  color: transparent; }
-
-input[type="range"]::-webkit-slider-runnable-track {
-  width: 100%; }
-
-input[type="range"] {
-  -webkit-appearance: none !important;
-  background: #000;
-  border: #666 1px solid;
-  height: 6px; }
-
-input[type="range"]::-webkit-slider-thumb {
-  -webkit-appearance: none !important;
-  background: #3389a6;
-  height: 15px;
-  width: 15px;
-  border-radius: 75%;
-  cursor: pointer; }
-
-input::-moz-range-track {
-  -webkit-appearance: none !important;
-  background: #000;
-  border: #666 1px solid;
-  height: 6px; }
-
-input::-moz-range-track::-webkit-slider-thumb {
-  -webkit-appearance: none !important;
-  background: #3389a6;
-  height: 15px;
-  width: 15px;
-  border-radius: 75%;
-  cursor: pointer; }
-
-input[type="range"]:focus {
-  outline: none; }
-
-input::-moz-range-track:focus {
-  outline: none; }
-
 .bar__area {
   height: 100%;
   width: 100%;
@@ -371,6 +357,35 @@ input::-moz-range-track:focus {
   margin-bottom: 1vw;
   padding-bottom: 5vw;
   padding-right: 1vw; }
+
+.header-secondary {
+  text-align: center;
+  font-size: 3rem;
+  background-color: lightblue;
+  border-top-right-radius: 0.5rem;
+  border-top-left-radius: 0.5rem;
+  transition: all 0.2s; }
+  .header-secondary--lines {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 2.5vw;
+    justify-content: space-evenly; }
+  .header-secondary--active {
+    display: none; }
+  .header-secondary:hover {
+    cursor: pointer;
+    background-color: #3389a6;
+    color: white; }
+
+.header-secondary--lines:hover > div {
+  background-color: white; }
+
+.line {
+  display: block;
+  height: 0.25rem;
+  width: 5rem;
+  background-color: black; }
 
 .book {
   position: relative;
