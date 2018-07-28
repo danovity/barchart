@@ -154,7 +154,8 @@ body {
   width: 100%;
   min-width: 310px;
   display: grid;
-  justify-content: center; }
+  justify-content: center;
+  margin-top: 2rem; }
 
 .chart {
   display: grid;
