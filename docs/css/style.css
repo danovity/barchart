@@ -396,7 +396,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: 2rem;
+    height: 3rem;
     justify-content: space-evenly; }
   .header-secondary--active {
     display: none; }
