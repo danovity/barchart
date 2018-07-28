@@ -98,10 +98,54 @@ body {
   grid-template-columns: min-content 80vw;
   grid-template-rows: 30vw; }
 
+.main-chart--secondary {
+  display: grid;
+  grid-template-columns: min-content 1fr; }
+
+.main-chart__y-axis {
+  align-self: start;
+  writing-mode: vertical-rl;
+  text-orientation: sideways-right;
+  transform: rotate(180deg);
+  font-size: 2rem;
+  margin-top: 15vw;
+  margin-right: 1vw; }
+
 .main-chart__title {
   text-align: center;
   margin-top: 5vw;
   font-size: 4rem; }
+
+.y-axis {
+  display: grid;
+  grid-template-rows: repeat(5, 1fr);
+  align-items: end;
+  margin-right: 0.5vw;
+  width: 100%;
+  position: relative;
+  /*   &::before {
+    content: "Quantity";
+    position: absolute;
+    top: 40%;
+    left: -350%;
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    transform: rotate(180deg);
+    font-size: 3rem;
+  } */ }
+
+.y-axis-mark {
+  position: relative;
+  transform: translateY(50%); }
+
+.y-axis-mark::before {
+  position: absolute;
+  content: "";
+  background-color: black;
+  height: 0.1rem;
+  width: 80vw;
+  top: 50%;
+  left: 80%; }
 
 .header-secondary {
   text-align: center;
@@ -322,35 +366,10 @@ input::-moz-range-track:focus {
     z-index: 100;
     border: 0.2rem solid #888888; }
 
-.y-axis {
-  display: grid;
-  grid-template-rows: repeat(5, 1fr);
-  align-items: end;
-  margin-right: 0.5vw;
-  width: 100%;
-  position: relative; }
-  .y-axis::before {
-    content: "Quantity";
-    position: absolute;
-    top: 40%;
-    left: -350%;
-    writing-mode: vertical-rl;
-    text-orientation: mixed;
-    transform: rotate(180deg);
-    font-size: 3rem; }
-
-.y-axis-mark {
-  position: relative;
-  transform: translateY(50%); }
-
-.y-axis-mark::before {
-  position: absolute;
-  content: "";
-  background-color: black;
-  height: 0.1rem;
-  width: 80vw;
-  top: 50%;
-  left: 80%; }
+.main-chart {
+  background-color: #eee;
+  box-shadow: 5px 5px 8px 5px #888888;
+  padding-bottom: 2rem; }
 
 .book {
   position: relative;
