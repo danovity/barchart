@@ -211,7 +211,11 @@ body {
 
 .control-panel {
   display: grid;
-  grid-template-rows: min-content 1fr; }
+  grid-template-rows: min-content 1fr;
+  top: 0;
+  position: sticky;
+  z-index: 200;
+  background-color: white; }
   .control-panel__controls {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
@@ -362,14 +366,12 @@ body {
   text-align: center;
   font-size: 3rem;
   background-color: lightblue;
-  border-top-right-radius: 0.5rem;
-  border-top-left-radius: 0.5rem;
   transition: all 0.2s; }
   .header-secondary--lines {
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: 2.5vw;
+    height: 2rem;
     justify-content: space-evenly; }
   .header-secondary--active {
     display: none; }
