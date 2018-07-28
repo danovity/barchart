@@ -159,19 +159,43 @@ body {
   display: grid;
   grid-template-columns: min-content 80vw;
   grid-template-rows: 30vw; }
+  @media only screen and (max-width: 600px) {
+    .chart {
+      grid-template-rows: 40vw; } }
+  @media only screen and (max-width: 500px) {
+    .chart {
+      grid-template-rows: 50vw; } }
+  @media only screen and (max-width: 450px) {
+    .chart {
+      grid-template-rows: 60vw; } }
+  @media only screen and (max-width: 400px) {
+    .chart {
+      grid-template-rows: 100vw; } }
 
 .main-chart--secondary {
   display: grid;
   grid-template-columns: min-content 1fr; }
 
 .main-chart__y-axis {
-  align-self: start;
+  align-self: center;
   writing-mode: vertical-rl;
   text-orientation: sideways-right;
   transform: rotate(180deg);
   font-size: 2rem;
-  margin-top: 15vw;
+  margin-top: -15vw;
   margin-right: 1vw; }
+  @media only screen and (max-width: 750px) {
+    .main-chart__y-axis {
+      margin-top: -15vw; } }
+  @media only screen and (max-width: 600px) {
+    .main-chart__y-axis {
+      margin-top: -20vw; } }
+  @media only screen and (max-width: 500px) {
+    .main-chart__y-axis {
+      margin-top: -25vw; } }
+  @media only screen and (max-width: 400px) {
+    .main-chart__y-axis {
+      margin-top: -30vw; } }
 
 .main-chart__title {
   text-align: center;
