@@ -24,12 +24,7 @@
                     <!-- <div class="input__bookQuantity--label control-panel__title--normalText">
                         Quantity
                     </div> -->
-                    <div class="control-panel__container--bookQuantity">
-                        <input type="text" class="input__bookQuantity  input__bookQuantity0 control-panel__title--normalText" name="quantity0" value=""
-                            placeholder="Qty 1">
-                        <input type="text" class="input__bookQuantity input__bookQuantity1 control-panel__title--normalText" name="quantity1" value=""
-                            placeholder="Qty 2">
-                    </div>
+                    <input type="text" class="input__bookQuantity control-panel__title--normalText" name="quantity" value="" placeholder='Enter Quantities Sep by ","'>
 
                     <input type="submit" value="Submit" class="submitBtn submitBtn__newBook">
                 </div>
@@ -69,30 +64,25 @@
 
             <div class="control-panel__container control-panel__container--barColorCtrl">
                 <p class="control-panel__title control-panel__title--barColorCtrl">Bar Color</p>
-                <div class="switchContainer">
+                <!--                 <div class="switchContainer">
                     <label class="switch">
                         <input type="checkbox" checked>
                         <span class="slider round"></span>
                     </label>
-                </div>
+                </div> -->
                 <div class="control-panel__content control-panel__content--barColorCtrl">
                     <div class="control-panel__container--btnContainer">
-                        <p class="control-panel__title--normalText control-panel__title--top">Top</p>
-                        <p class="control-panel__ctrlValue control-panel__ctrlValue--barColorCurrentTop "></p>
+                        <p class="control-panel__ctrlValue control-panel__ctrlValue--barColorCurrent">Click on bar for current color</p>
 
-                        <p class="control-panel__title--normalText control-panel__title--bottom">Bottom</p>
-                        <p class="control-panel__ctrlValue control-panel__ctrlValue--barColorCurrentBottom "></p>
                     </div>
                     <div class="control-panel__container--btnContainer">
-                        <p class="control-panel__title--normalText control-panel__title--hashTag control-panel__title--hashTag--top">#</p>
-                        <input class="control-panel__ctrlValue control-panel__ctrlValue--barColorNewTop" placeholder="New Color  (6 digits hex code)"
+                        <p class="control-panel__title--normalText control-panel__title--hashTag">#</p>
+                        <input class="control-panel__ctrlValue control-panel__ctrlValue--barColorNew" placeholder="New Color  (6 digits hex code)"
                             value=""></input>
-                        <p class="control-panel__title--normalText control-panel__title--hashTag control-panel__title--hashTag--bottom">#</p>
-                        <input class="control-panel__ctrlValue control-panel__ctrlValue--barColorNewBottom" placeholder="New Color  (6 digits hex code)"
-                            value=""></input>
+
                     </div>
-                    <input type="submit" value="Submit" class="submitBtn submitBtn--newBarColorTop">
-                    <input type="submit" value="Submit" class="submitBtn submitBtn--newBarColorBottom">
+                    <input type="submit" value="Submit" class="submitBtn submitBtn--newBarColor">
+
                 </div>
 
             </div>
