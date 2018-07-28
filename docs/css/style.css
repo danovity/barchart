@@ -351,8 +351,7 @@ input::-moz-range-track:focus {
   display: flex;
   align-items: flex-end;
   padding-left: 1.5vw;
-  justify-content: space-evenly;
-  background-color: #eee; }
+  justify-content: space-evenly; }
 
 .bar {
   margin-left: 0px;
@@ -367,9 +366,10 @@ input::-moz-range-track:focus {
     border: 0.2rem solid #888888; }
 
 .main-chart {
-  background-color: #eee;
+  background: linear-gradient(to right bottom, #0082c8, #eaf8ff 100%);
   box-shadow: 5px 5px 8px 5px #888888;
-  padding-bottom: 2rem; }
+  margin-bottom: 1vw;
+  padding-bottom: 5vw; }
 
 .book {
   position: relative;
