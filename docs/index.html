@@ -68,26 +68,29 @@
             </div>
 
             <div class="control-panel__container control-panel__container--barColorCtrl">
-                <p class="control-panel__title control-panel__title--barColorCtrl">Bar Color</p>
-                <!--                 <div class="switchContainer">
+                <p class="control-panel__title control-panel__title--barColorCtrl">Bar Color(Multi.Bars)</p>
+                <div class="switchContainer">
                     <label class="switch">
                         <input type="checkbox" checked>
                         <span class="slider round"></span>
                     </label>
-                </div> -->
+                </div>
                 <div class="control-panel__content control-panel__content--barColorCtrl">
                     <div class="control-panel__container--btnContainer">
-                        <p class="control-panel__ctrlValue control-panel__ctrlValue--barColorCurrent">Click on bar for current color</p>
-
+                        <p class="control-panel__ctrlValue control-panel__ctrlValue--barColorCurrentGroup">Click on bar for current color</p>
+                        <p class="control-panel__ctrlValue control-panel__ctrlValue--barColorCurrentIndividual">Click on bar for current color</p>
                     </div>
                     <div class="control-panel__container--btnContainer">
                         <p class="control-panel__title--normalText control-panel__title--hashTag">#</p>
-                        <input class="control-panel__ctrlValue control-panel__ctrlValue--barColorNew" placeholder="New Color  (6 digits hex code)"
+
+                        <input class="control-panel__ctrlValue control-panel__ctrlValue--barColorNewGroup" placeholder="New Color  (6 digits hex code)"
+                            value=""></input>
+                        <input class="control-panel__ctrlValue control-panel__ctrlValue--barColorNewIndividual" placeholder="New Color  (6 digits hex code)"
                             value=""></input>
 
                     </div>
-                    <input type="submit" value="Submit" class="submitBtn submitBtn--newBarColor">
-
+                    <input type="submit" value="Submit" class="submitBtn submitBtn--newBarColorGroup">
+                    <input type="submit" value="Submit" class="submitBtn submitBtn--newBarColorIndividual">
                 </div>
 
             </div>

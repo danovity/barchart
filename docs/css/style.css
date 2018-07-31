@@ -269,7 +269,7 @@ body {
     font-size: 2rem;
     align-self: center;
     grid-column: span 2; }
-    .control-panel__ctrlValue--barColorNew, .control-panel__ctrlValue--labelColorNew {
+    .control-panel__ctrlValue--barColorNewGroup, .control-panel__ctrlValue--barColorNewIndividual, .control-panel__ctrlValue--labelColorNew {
       border: none;
       text-indent: 1.5rem;
       height: 5rem;
@@ -277,7 +277,7 @@ body {
       font-size: 1.5rem;
       font-weight: 900;
       grid-column: span 2; }
-      .control-panel__ctrlValue--barColorNew:hover, .control-panel__ctrlValue--labelColorNew:hover {
+      .control-panel__ctrlValue--barColorNewGroup:hover, .control-panel__ctrlValue--barColorNewIndividual:hover, .control-panel__ctrlValue--labelColorNew:hover {
         background-color: #909090; }
   .control-panel__dropDownList {
     display: grid;
@@ -446,7 +446,8 @@ body {
   transform: translateY(1rem);
   transition: all 0.2s;
   position: relative;
-  margin-top: 1vw; }
+  margin-top: 1vw;
+  color: black; }
 
 .btnDelete {
   text-align: center;
